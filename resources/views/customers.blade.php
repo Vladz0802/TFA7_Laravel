@@ -5,6 +5,8 @@
 @section('content')
     <h1>Customer Accounts</h1>
 
+    <a class="btn" href="{{ route('customers.create') }}">+ Add Customer</a>
+
     <table>
         <thead>
             <tr>
@@ -12,6 +14,7 @@
                 <th>Full Name</th>
                 <th>Email</th>
                 <th>Phone</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +25,7 @@
                     <td>{{ $customer->full_name }}</td>
                     <td>{{ $customer->email }}</td>
                     <td>{{ $customer->phone }}</td>
+                    <td><a class="link" href="{{ route('customers.edit', $customer) }}">Edit</a></td>
                 </tr>
             @endforeach
         </tbody>

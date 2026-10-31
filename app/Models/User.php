@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model
 {
     // Columns that can be filled in with User::create([...]).
-    protected $fillable = ['username', 'full_name'];
+    protected $fillable = ['username', 'full_name', 'avatar'];
 }
